@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Local Specific Configuration
-ChurchSuiteSharp.Tests/Configuration.json
+/ChurchSuiteSharp.Tests/Configuration.json
 
 # User-specific files
 *.rsuser
@@ -354,3 +354,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
