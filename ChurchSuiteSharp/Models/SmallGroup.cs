@@ -21,11 +21,7 @@ namespace ChurchSuiteSharp.Models
         public string frequency { get; set; }
         public string id { get; set; }
         public string identifier { get; set; }
-        //"Parsing Error on Empty Values https://github.com/ChurchSuite/churchsuite-api/issues/11"
-        [JsonIgnore]
-        public IList<Images> images { get; set; }
-        //"Parsing Error on Empty Values see https://github.com/ChurchSuite/churchsuite-api/issues/11"
-        [JsonIgnore]
+        public Images images { get; set; }
         public Location location { get; set; }
         public string name { get; set; }
         public string no_members { get; set; }

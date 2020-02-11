@@ -26,7 +26,8 @@ namespace ChurchSuiteSharp.Tests
             {
                 MissingMemberHandling = MissingMemberHandling.Error
             };
-            var calander = JsonConvert.DeserializeObject<List<Models.Calendar>>(resultString, settings);
+            var cleanedResultString = JsonManager.EmptyArraysToNull(resultString);
+            var calander = JsonConvert.DeserializeObject<List<Models.Calendar>>(cleanedResultString, settings);
         }
 
         [Fact]
@@ -41,7 +42,8 @@ namespace ChurchSuiteSharp.Tests
             {
                 MissingMemberHandling = MissingMemberHandling.Error
             };
-            var calander = JsonConvert.DeserializeObject<List<Models.SmallGroup>>(resultString, settings);
+            var cleanedResultString = JsonManager.EmptyArraysToNull(resultString);
+            var calander = JsonConvert.DeserializeObject<List<Models.SmallGroup>>(cleanedResultString, settings);
 
 
         }

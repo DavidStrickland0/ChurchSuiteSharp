@@ -19,7 +19,9 @@ namespace ChurchSuiteSharp
             {
                 MissingMemberHandling = MissingMemberHandling.Error
             };
-            return JsonConvert.DeserializeObject<List<SmallGroup>>(resultString, settings);
+            var cleanedResultString = JsonManager.EmptyArraysToNull(resultString);
+
+            return JsonConvert.DeserializeObject<List<SmallGroup>>(cleanedResultString, settings);
         }
     }
 }
